@@ -1,0 +1,12 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('../../Images/icon_azul_1.png') no-repeat left center;
+    background-size: 60% 100%;
+}
+
+.form_login{
+    width: 20vw;
+    height: 30vh;
+    background-color: bisque;
+}
