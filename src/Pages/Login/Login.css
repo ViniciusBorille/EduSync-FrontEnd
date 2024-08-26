@@ -2,11 +2,46 @@
     width: 100vw;
     height: 100vh;
     background: url('../../Images/icon_azul_1.png') no-repeat left center;
-    background-size: 60% 100%;
+    background-size: 55% 100%;
 }
 
-.form_login{
-    width: 20vw;
-    height: 30vh;
-    background-color: bisque;
+.header_login {
+    text-align: center;
+    background: linear-gradient(to right, #E141B2, #ED90D2);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+}
+
+.main_form_login {
+    text-align: center;
+    flex: 1;
+    padding-top: 50px;
+}
+
+.footer_form_login {
+    text-align: center;
+    padding: 20px;
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 60vh;
+    position: fixed;
+    right: 10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    box-shadow: #b3b3b3 5px 5px 5px 2px;
+}
+
+.input_form {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: #b3b3b3 2px 2px 2px 2px;
 }
