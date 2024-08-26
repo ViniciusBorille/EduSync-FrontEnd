@@ -8,7 +8,10 @@ function App() {
       alert('Você clicou no botão da HomePage!');
     };
    return(
-      <Button onClick={handleClick} label="Entrar"/>
+      <>
+      <Button onClick={handleClick} label="Enviar"/>
+      <Button onClick={handleClick} label="Ola"/>
+      </>
    ) 
 }
 

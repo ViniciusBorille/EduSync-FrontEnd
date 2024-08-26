@@ -1,5 +1,5 @@
 import './Login.css';
-import logo_bg from '../../Images/icon_azul_1.png'
+
 import logo_form from '../../Images/logo_hori_azul 1.png'
 
 function Login() {

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 .custom_button{
     border-radius: 10px;
-    width:251px ;
-    height: 56px;
+    width:50vw ;
+    height: 10vh;
     background-color: #E141B2;
     border: none;
     color: white;
