@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.custom_button{
+    border-radius: 10px;
+    width:251px ;
+    height: 56px;
+    background-color: #E141B2;
+    border: none;
+    color: white;
+    font-size: 23px;
+    line-height: 28px;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

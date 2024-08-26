@@ -1,10 +1,14 @@
+import Button from './Componentes/button/Button';
 import Cadastro from './Pages/Cadastro/Cadastro';
 import Login from './Pages/Login/Login';
 
 
 function App() {
+   const handleClick = () => {
+      alert('Você clicou no botão da HomePage!');
+    };
    return(
-      <Login/>
+      <Button onClick={handleClick} label="Entrar"/>
    ) 
 }
 

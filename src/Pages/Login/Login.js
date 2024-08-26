@@ -5,7 +5,7 @@ import logo_form from '../../Images/logo_hori_azul 1.png'
 function Login() {
     return (
         <>
-            <body>
+            <body className='body_login'>
                 <form className='form_login'>
                     <header>
                         <img src={logo_form} className='logo_form'/>
