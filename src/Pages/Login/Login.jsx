@@ -1,5 +1,6 @@
+import React from 'react';
 import './Login.css';
-import Button from '../../Componentes/button/Button'
+import Button from '../../assets/Button/Button'
 import logo_form from '../../Images/logo_tracado_1.png'
 
 function Login() {
