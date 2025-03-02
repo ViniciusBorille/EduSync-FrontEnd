@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../../../api';
 import './CadastroUsuario.css';
+import ValidaEmail from '../../middleware/ValidaEmail';
 
 function CadastroUsuario() {
   const [formData, setFormData] = useState({
@@ -22,21 +23,27 @@ function CadastroUsuario() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     console.log('Dados enviados:', formData);
-    try {
-      await api.post('/cadusuario', formData, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      if(tipo_usuario == 'aluno'){
-        navigate('/cadastroaluno')
-      }
-    } catch (error) {
-      console.error('Erro ao cadastrar usuário:', error);
-    }
+    validaEmail(formData.email)
+    // try {
+    //   await api.post('/cadusuario', formData, {
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //   });
+    //   if(formData.tipo_usuario == 'aluno'){
+    //     navigate('/cadastroaluno')
+    //   }
+    // } catch (error) {
+    //   console.error('Erro ao cadastrar usuário:', error);
+    // }
   };
+
+  function validaEmail(email) {
+    ValidaEmail.validate(email)
+      .then(() => console.log('Email válido'))
+      .catch(err => console.log("Erro:", err.errors));
+  }
 
   return (
     <div className="page-container">
@@ -103,10 +110,11 @@ function CadastroUsuario() {
           className="form-select"
           value={formData.tipo_usuario}
           onChange={handleChange}
+          defaultValue={"aluno"}
         >
-          <option value="professor">Professor</option>
           <option value="aluno">Aluno</option>
           <option value="funcionario">Funcionário</option>
+          <option value="professor">Professor</option>
           <option value="responsavel">Responsável</option>
         </select>
         <button type="submit" className="form-button">Cadastrar</button>
@@ -114,5 +122,6 @@ function CadastroUsuario() {
     </div>
   );
 }
+
 
 export default CadastroUsuario;
